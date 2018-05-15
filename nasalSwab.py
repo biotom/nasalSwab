@@ -23,8 +23,6 @@ auth.set_access_token(twitter_access_token, twitter_access_secret)
 api = tweepy.API(auth)#tweepy API wrapper. Passed in the authentication handler
 
 class FluListener(StreamListener):#inherits from base class StreatmListener
-#    def on_data(self,data):
-#        print(data)
     def on_error(self,status):
         print(status)
     def on_data(self,data):
@@ -35,4 +33,4 @@ class FluListener(StreamListener):#inherits from base class StreatmListener
 if __name__ == '__main__':
     flu_listener = FluListener()
     sneeze = Stream(auth, flu_listener)
-    sneeze.filter(track=['flu','influenza'])
+    sneeze.filter(track=['flu','influenza'], follow=['16616061', '146569971', '855482932173168640']) #follow CDCFlu, CDCGov, BARDA
