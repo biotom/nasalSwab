@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun May 20 20:51:05 2018
+
+@author: Tom
+"""
+
+class json_listener(object):
+    def __init__(self, json_location):
+        self.json_location = json_location
+        
+    def json_monitor(self, self.json_location):
+        with open(self.json_location) as f:
+            json_tweets = json.load(f)
+        for tweet in json_tweets:
+            time = 
+        
